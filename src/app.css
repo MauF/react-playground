@@ -1,0 +1,40 @@
+.app-wrapper {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-rows: 0.5fr 10fr 0.3fr;
+    grid-template-areas:
+     "header"
+     "main"
+     "footer";
+}
+
+.main {
+    display: grid;
+    grid-area: main;
+
+    grid-template-columns: 2fr 10fr;
+    grid-template-areas:
+     "side-menu working-area";
+}
+
+.side-menu {
+    grid-area: side-menu;
+    border-right: 1px solid grey;
+    display: flex;
+    align-items: flex-start;
+    padding-left: 5px;
+    flex-direction: column;
+}
+
+.working-area {
+    grid-area: working-area;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.active:after {
+    content: "<-";
+}
