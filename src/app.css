@@ -18,15 +18,6 @@
      "side-menu working-area";
 }
 
-.side-menu {
-    grid-area: side-menu;
-    border-right: 1px solid grey;
-    display: flex;
-    align-items: flex-start;
-    padding-left: 5px;
-    flex-direction: column;
-}
-
 .working-area {
     grid-area: working-area;
 
