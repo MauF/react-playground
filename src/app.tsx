@@ -8,12 +8,10 @@ import {useState} from "react";
 function App() {
 
     const [isMenuVisible, setMenuVisible] = useState(true);
-    const [isDropDownVisible, setDropDownVisible] = useState(false);
 
     return (
         <div className="app-wrapper">
-            <Header isDropDownVisible={isDropDownVisible}
-                    toggleDropdownFn={() => setDropDownVisible(!isDropDownVisible)} isMenuVisible={isMenuVisible}
+            <Header isMenuVisible={isMenuVisible}
                     toggleMenuFn={() => setMenuVisible(!isMenuVisible)}></Header>
             <div className="main">
                 {isMenuVisible && <SideMenu></SideMenu>}
